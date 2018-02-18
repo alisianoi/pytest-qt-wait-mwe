@@ -45,7 +45,7 @@ class Controller(QObject):
 
         super().__init__(parent)
 
-        self.threadpool = QThreadPool()
+        self.threadpool = QThreadPool.globalInstance()
 
     def work(self):
         worker = Worker(self)
