@@ -18,7 +18,7 @@ class Worker(QObject):
     def work(self):
         self.started.emit()
 
-        QThread.currentThread().sleep(randint(0, 3))
+        QThread.currentThread().msleep(randint(0, 100))
 
         self.stopped.emit()
 
